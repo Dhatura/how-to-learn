@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .logo_place_header {
