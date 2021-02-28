@@ -18,11 +18,15 @@
   display: flex;
   align-items: center;
   position: relative;
+  overflow: hidden
 }
 
 .logo_place_header {
   width: 183px;
   height: 32px;
+  background-image: url(../images/logo_place_header.svg);
+  background-size: cover;
+  background-position: center;
   position: absolute;
   top: 30px;
   left: 64px;
@@ -55,10 +59,6 @@
   color: #2f80ed;
 }
 
-.header__link:visited {
-  color: grey;
-}
-
 .header__main-illustration {
   width: 765px;
   height: 608px;
@@ -78,7 +78,7 @@
   z-index: 0;
 }
 
-/*.description {
+.description {
   display: flex;
   justify-content: center;
 }
@@ -87,10 +87,7 @@
   display: flex;
   width: 80%;
   justify-content: space-between;
-}
-
-.two-columns__indent {
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
 .two-columns__brief {
@@ -130,12 +127,9 @@
 
 .digits {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.digits__indent {
-  margin: 100px 0;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
 }
 
 .section-title {
@@ -144,9 +138,6 @@
   font-size: 60px;
   font-weight: bold;
   text-align: center;
-}
-
-.section-title__indent {
   margin: 0;
 }
 
@@ -164,12 +155,183 @@
 
 .table {
   width: 1100px;
-}*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-/* и элемента с модификатором вида ключ-значение */
+.table__cell {
+  width: 250px;
+  margin-top: 60px;
+}
+
+.table__heading {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.table__text {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 20px 0 0 0;
+}
+
+.feynman {
+  height: 790px;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  position: relative;
+}
+
+.feynman__title {
+  width: 648px;
+  margin: 0 auto;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+}
+
+.feynman__subtitle {
+  margin: 70px auto 0;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  text-align: center;
+  z-index: 1;
+}
+
+.feynman__link {
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  text-align: center;
+  color: #2f80ed;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.feynman__back {
+  width: 867px;
+  height: 637px;
+  background-image: url(../images/feynman.png);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.kaufman {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1f1f1f;
+  padding: 90px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title_theme_dark {
+  color: white;
+}
+
+.section-subtitle_theme_dark {
+  color: white;
+}
+
 .table__cell_theme_dark {
   width: 200px;
   color: white;
   margin-right: 0;
   margin-top: 80px;
+  z-index: 1;
+}
+
+.kaufman__triangle {
+  width: 877px;
+  height: 877px;
+  background-image: url(../images/kaufman-triangle.svg);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  right: -210px;
+  z-index: 0;
+}
+
+.footer {
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  background-color: #1f1f1f;
+  padding: 60px 0 40px 0;
+  position: relative;
+}
+
+.footer__columns {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.footer__columns_content_copyright {
+  flex-basis: 711px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo_place_footer {
+  width: 183px;
+  height: 35px;
+  background-image: url(../images/logo_place_footer.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+.footer__author {
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+  color: white;
+  margin: 18px auto 18px 0;
+}
+
+.footer__column-heading {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.footer__column-links {
+  margin: 20px 0 16px 0;
+  list-style: none;
+  padding: 0;
+}
+
+.footer__column-link {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  color: white;
+}
+
+.footer__column-link_logo_pic {
+  margin-right: 10px;
 }
