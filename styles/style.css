@@ -21,12 +21,15 @@
   overflow: hidden;
 }
 
-.logo_place_header {
+.logo {
   width: 183px;
-  height: 32px;
-  background-image: url(../images/logo_place_header.svg);
   background-size: cover;
   background-position: center;
+}
+
+.logo_place_header {
+  height: 32px;
+  background-image: url(../images/logo_place_header.svg);
   position: absolute;
   top: 30px;
   left: 64px;
@@ -34,7 +37,8 @@
 }
 
 .header__title {
-  width: 730px;
+  max-width: 730px;
+  width: 100%;
   margin: 0 0 0 64px;
   line-height: 96px;
   font-size: 102px;
@@ -108,16 +112,10 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
-  margin: 30px 0;
+  margin: 0 0 30px 0;
 }
 
-.two-columns__paragraph:first-of-type {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.two-columns__paragraph:last-of-type {
-  margin-top: 0;
+.two-columns__paragraph:last-child {
   margin-bottom: 0;
 }
 
@@ -147,10 +145,8 @@
   font-size: 24px;
   font-weight: normal;
   text-align: center;
-}
-
-.section-subtitle__indent {
-  margin: 20px 0 0 0;
+  margin: 0;
+  padding-top: 20px;
 }
 
 .table {
@@ -158,6 +154,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .table__cell {
@@ -180,7 +179,7 @@
 }
 
 .feynman {
-  height: 790px;
+  min-height: 790px;
   padding-top: 100px;
   display: flex;
   flex-direction: column;
@@ -246,10 +245,12 @@
 
 .section-title_theme_dark {
   color: white;
+  z-index: 1;
 }
 
 .section-subtitle_theme_dark {
   color: white;
+  z-index: 1;
 }
 
 .table__cell_theme_dark {
@@ -279,6 +280,7 @@
   background-color: #1f1f1f;
   padding: 60px 0 40px 0;
   position: relative;
+  box-sizing: border-box;
 }
 
 .footer__columns {
@@ -289,9 +291,7 @@
 
 .footer__columns_content_copyright {
   flex-basis: 711px;
-  display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .logo_place_footer {
@@ -308,6 +308,16 @@
   font-weight: normal;
   color: white;
   margin: 18px auto 18px 0;
+}
+
+.footer__columns_content_info {
+  display: block;
+  width: auto;
+}
+
+.footer__columns_content_social {
+  display: block;
+  width: auto;
 }
 
 .footer__column-heading {
@@ -332,6 +342,6 @@
   color: white;
 }
 
-.footer__column-link_logo_pic {
+.footer__social-icon {
   margin-right: 10px;
 }
