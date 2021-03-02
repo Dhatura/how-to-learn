@@ -289,9 +289,11 @@
   width: 90%;
 }
 
-.footer__columns_content_copyright {
+.footer__column_content_copyright {
+  display: flex;
   flex-basis: 711px;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo_place_footer {
@@ -308,16 +310,6 @@
   font-weight: normal;
   color: white;
   margin: 18px auto 18px 0;
-}
-
-.footer__columns_content_info {
-  display: block;
-  width: auto;
-}
-
-.footer__columns_content_social {
-  display: block;
-  width: auto;
 }
 
 .footer__column-heading {
